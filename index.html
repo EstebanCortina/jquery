@@ -10,9 +10,26 @@
 
 <body>
 
+  <h1 style="display: none;">Seleccionado por etiqueta h1</h1>
+  <h2 id="h2">Seleccionado por id=h2</h2>
+  <h3 class="h3" style="display: none;">Seleccionado por class=h3</h3>
+
+
   <script>
+    //Como buena practica, que todo este adentro del document.ready para asegurarnos que el dom esta completo.
     $(document).ready(() => {
+
       console.log("Listo jQuery");
+
+
+      //Selector para tags:
+      $("h1").fadeIn(2000);
+
+      //Selector para id:
+      $("#h2").fadeTo(2000, 0.5);
+
+      //Selector para class:
+      $(".h3").slideDown(2000);
     })
   </script>
 </body>
